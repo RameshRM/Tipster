@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet var tipAmounts: UISegmentedControl!
     private var _tipPercentages = [18,20,22];
     override func viewDidLoad() {
+
         bindValues(0.0, total: 0.0);
         super.viewDidLoad()
     }
@@ -28,6 +29,7 @@ class ViewController: UIViewController {
         var thisBillAmount = thisBillAmountString.doubleValue;
         var tipValue = (thisBillAmount) * selectedTipValue;
         bindValues(tipValue, total: (thisBillAmount + tipValue));
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -45,7 +47,6 @@ class ViewController: UIViewController {
     func bindValues(tip: Double, total: Double)->Void{
         selectedTip.text = String(format:"$%.2f",tip);
         totalAmount.text = String(format:"$%.2f", total);
-        
     }
 }
 
