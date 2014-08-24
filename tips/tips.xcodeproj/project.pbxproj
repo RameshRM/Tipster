@@ -12,6 +12,7 @@
 		90C5AEB819A93D8500F8895F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C5AEB619A93D8500F8895F /* Main.storyboard */; };
 		90C5AEBA19A93D8500F8895F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C5AEB919A93D8500F8895F /* Images.xcassets */; };
 		90C5AEC619A93D8500F8895F /* tipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C5AEC519A93D8500F8895F /* tipsTests.swift */; };
+		90C5AED019A9A26000F8895F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C5AECF19A9A26000F8895F /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		90C5AEBF19A93D8500F8895F /* tipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C5AEC419A93D8500F8895F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90C5AEC519A93D8500F8895F /* tipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsTests.swift; sourceTree = "<group>"; };
+		90C5AECF19A9A26000F8895F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +77,8 @@
 		90C5AEAF19A93D8500F8895F /* tips */ = {
 			isa = PBXGroup;
 			children = (
+				90C5AED119A9A28C00F8895F /* View Controllers */,
 				90C5AEB219A93D8500F8895F /* AppDelegate.swift */,
-				90C5AEB419A93D8500F8895F /* ViewController.swift */,
 				90C5AEB619A93D8500F8895F /* Main.storyboard */,
 				90C5AEB919A93D8500F8895F /* Images.xcassets */,
 				90C5AEB019A93D8500F8895F /* Supporting Files */,
@@ -107,6 +109,15 @@
 				90C5AEC419A93D8500F8895F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90C5AED119A9A28C00F8895F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				90C5AECF19A9A26000F8895F /* SettingsViewController.swift */,
+				90C5AEB419A93D8500F8895F /* ViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 			files = (
 				90C5AEB519A93D8500F8895F /* ViewController.swift in Sources */,
 				90C5AEB319A93D8500F8895F /* AppDelegate.swift in Sources */,
+				90C5AED019A9A26000F8895F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
