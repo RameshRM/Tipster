@@ -115,28 +115,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Some Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zyg-VT-CPF">
-                                <rect key="frame" x="86" y="273" width="148" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Tip %" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PhE-4l-KtA">
+                                <rect key="frame" x="16" y="141" width="105" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0fS-rw-qfM">
-                                <rect key="frame" x="272" y="27" width="40" height="30"/>
+                            <navigationBar contentMode="scaleToFill" id="wvz-2h-rUt">
+                                <rect key="frame" x="0.0" y="18" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="df6-vx-JYZ">
+                                        <barButtonItem key="leftBarButtonItem" title="Close" id="0J2-to-gEF">
+                                            <connections>
+                                                <action selector="closeSettings:" destination="p4l-go-JhF" id="ixx-iJ-s0X"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="adG-wW-5fT">
+                                            <connections>
+                                                <action selector="save:" destination="p4l-go-JhF" id="jCS-OR-las"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="dn4-ej-kKB">
+                                <rect key="frame" x="16" y="176" width="270" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Close">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                                 <connections>
-                                    <action selector="closeSettings:" destination="p4l-go-JhF" eventType="touchUpInside" id="IjR-yP-cEO"/>
+                                    <action selector="onTipsPercenatgeChanged:" destination="p4l-go-JhF" eventType="editingChanged" id="hm0-uJ-4JK"/>
                                 </connections>
-                            </button>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="defaultTipsPercentage" destination="dn4-ej-kKB" id="sdm-XG-ZBM"/>
+                        <outlet property="saveSettings" destination="adG-wW-5fT" id="Vcj-Hw-kKr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Upb-Z3-fu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="yId-Sk-3wB">
+                    <connections>
+                        <action selector="onTapped:" destination="p4l-go-JhF" id="0oZ-Hs-JFS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1169" y="355"/>
         </scene>

@@ -13,6 +13,7 @@
 		90C5AEBA19A93D8500F8895F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C5AEB919A93D8500F8895F /* Images.xcassets */; };
 		90C5AEC619A93D8500F8895F /* tipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C5AEC519A93D8500F8895F /* tipsTests.swift */; };
 		90C5AED019A9A26000F8895F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C5AECF19A9A26000F8895F /* SettingsViewController.swift */; };
+		90C5AED419A9AB5600F8895F /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C5AED319A9AB5600F8895F /* AppSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		90C5AEC419A93D8500F8895F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90C5AEC519A93D8500F8895F /* tipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsTests.swift; sourceTree = "<group>"; };
 		90C5AECF19A9A26000F8895F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		90C5AED319A9AB5600F8895F /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		90C5AEA419A93D8500F8895F = {
 			isa = PBXGroup;
 			children = (
+				90C5AED219A9AB3800F8895F /* AppModules */,
 				90C5AEAF19A93D8500F8895F /* tips */,
 				90C5AEC219A93D8500F8895F /* tipsTests */,
 				90C5AEAE19A93D8500F8895F /* Products */,
@@ -118,6 +121,14 @@
 				90C5AEB419A93D8500F8895F /* ViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		90C5AED219A9AB3800F8895F /* AppModules */ = {
+			isa = PBXGroup;
+			children = (
+				90C5AED319A9AB5600F8895F /* AppSettings.swift */,
+			);
+			name = AppModules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +232,7 @@
 			files = (
 				90C5AEB519A93D8500F8895F /* ViewController.swift in Sources */,
 				90C5AEB319A93D8500F8895F /* AppDelegate.swift in Sources */,
+				90C5AED419A9AB5600F8895F /* AppSettings.swift in Sources */,
 				90C5AED019A9A26000F8895F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

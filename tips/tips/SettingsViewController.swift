@@ -9,30 +9,54 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    
+    @IBOutlet var defaultTipsPercentage: UITextField!
+    @IBOutlet var saveSettings: UIBarButtonItem!
+    private var defaultTips: Double=0;
     override func viewDidLoad() {
+        saveSettings.enabled = false;
         super.viewDidLoad()
-
+        
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
     @IBAction func closeSettings(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func onTapped(sender: AnyObject) {
+        view.endEditing(true);
+    }
+    
+    @IBAction func onTipsPercenatgeChanged(sender: AnyObject) {
+        var defaultTipsInString = NSString(string: defaultTipsPercentage.text);
+        var defaultTip = defaultTipsInString.doubleValue;
+        bindState(defaultTipsInString.doubleValue);
+        defaultTips = getValidTipValue(defaultTip);
+    }
+    
+    @IBAction func save(sender: AnyObject) {
+        AppSettings.set("defaultTips", settingsValue: defaultTips);
+        closeSettings(sender);
+    }
+    
+    func bindState(tipsPercentage: Double)->Void{
+        saveSettings.enabled = (tipsPercentage > 0 && tipsPercentage < 100);
+    }
+    
+    
+    func getValidTipValue(tipValue: Double)->Double{
+        if(tipValue > 0 && tipValue < 100){
+            return tipValue;
+        }
+        return 0;
+    }
+    
 }
